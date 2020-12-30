@@ -16,6 +16,34 @@
 
 </script>
 
+<div class="wrapper">
+<div class="header">
+<div class="header-section">
+	<div>
+	<a class="btn btn-lg btn-primary" href="#" on:click={toggleNav}>&equiv;</a>
+	</div>
+	<div class="nav">
+		<div class="nav-item">abc</div>
+		<div class="nav-item">def</div>
+		<div class="nav-item">ghi</div>
+		
+	</div>			
+</div>
+<div class="header-section"><img width="30px" height="30px" src="./favicon.ico"/></div>
+</div>
+
+
+<div class="content">
+</div>
+
+<div class="footer">
+</div>	
+
+</div>
+
+
+
+<!--
 <div class="side-nav" id="sidenav">
 	<button on:click={toggleNav}>&times;</button>
 </div>
@@ -49,7 +77,6 @@
 
 		</div>
 		<div class="content">
-		  <!--<div style="height:1000px;">Content</div>-->
 		  <p>ewffgf ef gfe geg fergr g3r gr3 g3g 3rg 3g 3g 3g 3g 3gr3 gr3 g3 gr3 gr3 g3 g3r g3 g3 g3g 3 g3r g3rg 3rg 3r g3rg 3g 3rg 3g 3g ffwfwfwefewfw fwe fwef wef ewf wf wef wef ewf wef wef w wef wef wef wefw ef wfwe eff wef ewew fwe few fwe fwef</p>
 			<p> bgrb    <button class="button">clear</button></p>
 		  <table>
@@ -67,7 +94,7 @@
 			</div>
 	  </div>
 
-
+	-->
 <style>
 	
 </style>
