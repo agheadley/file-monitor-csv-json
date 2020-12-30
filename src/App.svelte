@@ -16,19 +16,7 @@
 
 </script>
 
-<div class="side-nav" id="sidenav">xfewfwfwfwfwfw
-	ewfwfewfwfwfw
-	ffwefwfwf
-	w fewfwfwfwf
-	wf ffwefewfwfewfewf 
-		fewf
-		ffewf
-		wefwef
-		wfwefwe
-		fwf
-			wef
-		
-
+<div class="side-nav" id="sidenav">
 	<button on:click={toggleNav}>&times;</button>
 </div>
 
@@ -37,10 +25,13 @@
 	
 
 	<div class="header">
-					<div class="p-10">
-						<button class="button primary" on:click={toggleNav}>&equiv;</button>
-						heading
+					<div class="navbar-section">
+					<div class="p10">
+	
+					<a class="button" href="#" on:click={toggleNav}>&equiv;</a>
 					</div>
+					<div class="p10">heading</div>
+				</div>
 					
 				<div class="p-10">
 					<a href="#">link1</a>
