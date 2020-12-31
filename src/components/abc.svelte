@@ -5,8 +5,11 @@ let data=[];
 	}
 </script>
 
+<div class="container">
 <h1>abc</h1>
+</div>
 
+<div class="card">
 <table>
     <tr>
         {#each data as item}
@@ -14,3 +17,4 @@ let data=[];
         {/each}
     </tr>
 </table>
+</div>
