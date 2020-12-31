@@ -1,10 +1,11 @@
 <script lang="ts">
 
-	import abc from "./components/abc.svelte";
-	import def from "./components/def.svelte";
-	import ghi from "./components/ghi.svelte";
+	import Abc from "./components/abc.svelte";
+	import Def from "./components/def.svelte";
+	import Ghi from "./components/ghi.svelte";
+
+	import Login from "./components/login.svelte";
 	
-	export let name: string;
 
 	let toggleNav=()=>{
 		let el=document.getElementById('sidebar');
@@ -19,21 +20,18 @@
 
 	let pageIndex:number=0;
 	let pages=[
-		{component:abc,name:"abc"},
-		{component:def,name:"def"},
-		{component:ghi,name:"ghi"}
+		{component:Abc,name:"abc"},
+		{component:Def,name:"def"},
+		{component:Ghi,name:"ghi"}
 	];
 	
 	
-	let data=[];
-	for(let i=0;i<50;i++) {
-		data[i]="xyz"+i;
-	}
+	
 
 </script>
 
 <div class="sidebar" id="sidebar">
-	<div>
+	<div class="sidebar-close">
 	<a class="btn-lg" href="#" on:click={toggleNav}>&times;</a>
 	</div>
 	<div>
@@ -63,7 +61,8 @@
 		
 	</div>			
 </div>
-<div class="header-section"><button class="btn-primary">sign-in</button></div>
+<div class="header-section"><Login/></div>
+
 </div>
 
 

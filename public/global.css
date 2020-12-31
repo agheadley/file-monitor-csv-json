@@ -99,6 +99,43 @@ html, body {
 	overflow:hidden;
 }
 
+.sidebar-close {
+	font-size:3rem;
+	text-align:right;
+	padding:1rem;
+}
+
+ul {
+	list-style-type: none;
+	margin: 1rem;
+	padding: 1rem;
+}
+
+li {
+	padding:1rem;
+}
+
+.modal {
+	position:fixed;
+	top:0;
+	left:0;
+	width:0px;
+	height:100%;
+	z-index:1;
+	background-color:white;
+	transition:0.2s;
+	border-right:1px solid var(--secondary-color);
+	font-size:1.5rem;
+	overflow:hidden;
+}
+
+.modal-close {
+	font-size:3rem;
+	text-align:right;
+	padding:1rem;
+}
+
+
   
   
 a,a:active,a.visited {
@@ -117,6 +154,9 @@ a.btn-lg:active {
 	font-size:3rem;
 }
 
+a.btn-sm:active {
+	font-size:1rem;
+}
 
 .btn-lg {
 	font-size:3rem;
@@ -126,29 +166,28 @@ a.btn-lg:active {
 	font-size:1rem;
 }
 
-button {
+.btn,.btn:active,.btn:focus{
 	padding:1rem;
 	background:var(--secondary-transparent);
 	color:var(--text-color);
 	border:none;
 	border-radius:0.5rem;
 	text-transform:uppercase;
+	outline:none;
 	
 }
 
-button:hover {
+.btn:hover {
 	background:var(--secondary-color);
 }
 
 .btn-primary {
 	background:var(--primary-color);
+
 	color:white;
 }
 
-.btn-primary:hover {
-	background:var(--secondary-color);	
-	color:var(--text-color);
-}
+
 
 .p10 {
 	padding-left:1rem;
