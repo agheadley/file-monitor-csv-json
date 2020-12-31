@@ -6,7 +6,9 @@
 	--success-color:#4b4;
 
 	--text-color:#333;
-
+	--primary-transparent:rgba(0,128,255,0.2);
+	--secondary-transparent:rgba(160,160,160,0.2);
+	
 }
 
 
@@ -70,14 +72,18 @@ html, body {
 }
 
 .nav-item {
-	background:var(--primary-color);
+	background-color:var(--primary-transparent);
+	border-bottom:0.2rem solid white;
 	padding-left:1rem;
 	padding-right:1rem;
-	color:white;
+	color:var(--text-color);
 	margin:0.5rem;
+	cursor:pointer;
 }
 
-
+.nav-selected {
+	border-bottom:0.2rem solid var(--danger-color);
+}
 
   .sidebar {
 	position:fixed;
@@ -120,18 +126,6 @@ text-decoration:none;
 color:var(--secondary-color);
 }
 
-a.button {
-	font-size:3rem;
-}
-
-a.btn,a.btn:active,a.btn:visited {
-	text-decoration:none;
-	color:var(--primary-color);
-}
-
-a.btn:hover {
-	color:var(--secondary-color);	
-}
 
 a.btn-lg:active {
 	font-size:3rem;
@@ -146,7 +140,33 @@ a.btn-lg:active {
 	font-size:1rem;
 }
 
+button {
+	padding:1rem;
+	background:var(--secondary-transparent);
+	color:var(--text-color);
+	border:none;
+	border-radius:0.5rem;
+	text-transform:uppercase;
+	
+}
+
+button:hover {
+	background:var(--secondary-color);
+}
+
+.btn-primary {
+	background:var(--primary-color);
+	color:white;
+}
+
+.btn-primary:hover {
+	background:var(--secondary-color);	
+	color:var(--text-color);
+}
+
 .p10 {
 	padding-left:1rem;
 	padding-right:1rem;
 }
+
+

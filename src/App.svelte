@@ -1,4 +1,9 @@
 <script lang="ts">
+
+	import abc from "./components/abc.svelte";
+	import def from "./components/def.svelte";
+	import ghi from "./components/ghi.svelte";
+	
 	export let name: string;
 
 	let toggleNav=()=>{
@@ -6,10 +11,16 @@
 		if(el.style.width==="200px") el.style.width="0px";
 		else el.style.width="200px";
 	}
+
+	let pageIndex:number=0;
+	let pages=[
+		{component:abc,name:"abc"},
+		{component:def,name:"def"},
+		{component:ghi,name:"ghi"}
+	];
 	
 	
 	let data=[];
-
 	for(let i=0;i<50;i++) {
 		data[i]="xyz"+i;
 	}
@@ -20,26 +31,37 @@
 <div class="header">
 <div class="header-section">
 	<div>
-	<a class="btn btn-lg btn-primary" href="#" on:click={toggleNav}>&equiv;</a>
+	<a class="btn-lg" href="#" on:click={toggleNav}>&equiv;</a>
 	</div>
 	<div class="nav">
-		<div class="nav-item">abc</div>
-		<div class="nav-item">def</div>
-		<div class="nav-item">ghi</div>
+		{#each pages as page,i}
+		{#if pageIndex===i}
+		<div class="nav-item nav-selected" on:click={()=>pageIndex=i}>{page.name}</div>
+		{/if}
+		{#if pageIndex!==i}
+		<div class="nav-item" on:click={()=>pageIndex=i}>{page.name}</div>
+		{/if}
+		{/each}
 		
 	</div>			
 </div>
-<div class="header-section"><img width="30px" height="30px" src="./favicon.ico"/></div>
+<div class="header-section"><button class="btn-primary">sign-in</button></div>
 </div>
 
 
 <div class="content">
-</div>
+
+	<svelte:component this={pages[pageIndex].component} />
+
+</div> <!--end of content-->
 
 <div class="footer">
+	<div class="header-section">testing</div>
+	<div class="header-section"><img width="30px" height="30px" src="./favicon.ico"/></div>
+
 </div>	
 
-</div>
+</div> <!--end of wrapper-->
 
 
 
