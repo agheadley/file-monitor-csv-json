@@ -7,9 +7,14 @@
 	export let name: string;
 
 	let toggleNav=()=>{
-		let el=document.getElementById('sidenav');
+		let el=document.getElementById('sidebar');
 		if(el.style.width==="200px") el.style.width="0px";
 		else el.style.width="200px";
+	}
+
+	let openPage=(index:number)=>{
+		pageIndex=index;
+		toggleNav();
 	}
 
 	let pageIndex:number=0;
@@ -26,6 +31,19 @@
 	}
 
 </script>
+
+<div class="sidebar" id="sidebar">
+	<div>
+	<a class="btn-lg" href="#" on:click={toggleNav}>&times;</a>
+	</div>
+	<div>
+		<ul>
+		{#each pages as page,i}
+		<li><a href="#" on:click={()=>openPage(i)}>{page.name}</a></li>
+		{/each}
+		</ul>
+	</div>
+</div>
 
 <div class="wrapper">
 <div class="header">

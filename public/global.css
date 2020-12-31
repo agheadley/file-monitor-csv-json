@@ -85,7 +85,7 @@ html, body {
 	border-bottom:0.2rem solid var(--danger-color);
 }
 
-  .sidebar {
+.sidebar {
 	position:fixed;
 	top:0;
 	left:0;
@@ -97,23 +97,9 @@ html, body {
 	border-right:1px solid var(--secondary-color);
 	font-size:1.5rem;
 	overflow:hidden;
-  }
+}
 
-  .side-nav {
-	  position:fixed;
-	  top:0;
-	  left:0;
-	  width:0px;
-	  height:100%;
-	  z-index:1;
-	  background-color:white;
-	  transition:0.2s;
-	  border-right:1px solid var(--secondary-color);
-	  font-size:1.5rem;
-	  overflow:hidden;
-
-  }
-
+  
   
 a,a:active,a.visited {
 	font-size:1.5rem;
