@@ -39,6 +39,8 @@ html, body {
 	align-items:center;
 }
 
+
+
 .header-section {
 	padding-left:1rem;
 	padding-right:1rem;
@@ -135,7 +137,7 @@ li {
 
 .modal-card {
 	margin:2rem 2rem 2rem 2rem;
-	padding:5rem 2rem 5rem 2rem;
+	padding:3rem 2rem 3rem 2rem;
 	border:1px solid var(--secondary-color);
 	border-radius:0.2rem;
 	font-size:1.5rem;
@@ -146,7 +148,7 @@ li {
 
 .card {
 	margin:2rem 2rem 2rem 2rem;
-	padding:5rem 2rem 5rem 2rem;
+	padding:3rem 2rem 3rem 2rem;
 	border:1px solid var(--secondary-color);
 	border-radius:0.2rem;
 	font-size:1.5rem;
@@ -247,3 +249,13 @@ a.btn-sm:active {
 	justify-content:space-between;
 
 }
+
+table {
+	border-collapse: collapse;
+  }
+  
+  td, th {
+	border: 1px solid var(--text-color);
+	padding: 0.5rem;
+	text-align: left;
+  }
