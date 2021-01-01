@@ -2,11 +2,27 @@
 let data=[];
 	for(let i=0;i<50;i++) {
 		data[i]=""+i;
-	}
+    }
+    
+let files;
 </script>
 
 <div class="container">
 <h1>abc</h1>
+</div>
+
+<div class="card">
+    <h2>File Upload</h2>
+    <div>
+        <input class="file-input" type="file" bind:files>
+
+{#if files && files[0]}
+	<p>
+		{files[0].name}
+	</p>
+{/if}
+    </div>
+
 </div>
 
 <div class="container">
