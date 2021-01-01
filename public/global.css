@@ -204,7 +204,7 @@ a.btn-sm:active {
 	
 }
 
-.btn:hover {
+.btn:hover,.btn:disabled,.btn[disabled] {
 	background:var(--secondary-color);
 }
 
