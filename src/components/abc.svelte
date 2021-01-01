@@ -9,10 +9,30 @@ let data=[];
 let files:File[];
 let filedata:string="";
 
+let rowlength:number=60;
+let rows:string[][]=[];
+rows[0]=[];
+let getRows = () => {
+    let row:number=0;
+    let index:number=0;
+    for(let item of filedata) {
+        rows[row][index]=item;
+        index++;
+        if(index>=rowlength) {
+            index=0;
+            row++;
+            rows[row]=[];
+        }
+
+    }
+    console.log(rows);
+};
+
 let upload=()=>{
     file.read(files[0],res=>{
         filedata=res;
         console.log(res);
+        getRows();
 
     });
 };
@@ -40,3 +60,23 @@ let upload=()=>{
 
 </div>
 
+<div class="container">
+
+<table>
+    <tbody>
+        {#each rows as row,rowIndex}
+        <tr>
+            {#each row as col,colIndex}
+                <td>{col}</td>
+            {/each}
+        </tr>
+        {/each}
+
+
+    </tbody>
+
+</table>
+
+
+</div>
+    
