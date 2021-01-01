@@ -252,10 +252,10 @@ a.btn-sm:active {
 
 table {
 	border-collapse: collapse;
-  }
-  
-  td, th {
+}
+
+td, th {
 	border: 1px solid var(--text-color);
 	padding: 0.5rem;
 	text-align: left;
-  }
+}
