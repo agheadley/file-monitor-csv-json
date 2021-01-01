@@ -7,7 +7,7 @@ let toggleModal=()=>{
 
 </script>
 
-<button on:click={toggleModal} class="btn">log in</button>
+<button on:click={toggleModal} class="btn btn-primary">log in</button>
 
 <div class="modal" id="signin-modal">
     <div class="modal-close">

@@ -58,7 +58,8 @@ html, body {
 
 .content {
 	flex: 1;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y:auto;
 }
 
 .nav {
@@ -136,10 +137,10 @@ li {
 }
 
 .card {
-	margin:2rem 5rem 2rem 5rem;
+	margin:2rem 2rem 2rem 2rem;
 	padding:5rem 2rem 5rem 2rem;
 	border:1px solid var(--secondary-color);
-	border-radius:0.5rem;
+	border-radius:0.2rem;
 	font-size:1.5rem;
 	overflow:auto;
 }
@@ -182,11 +183,12 @@ a.btn-sm:active {
 }
 
 .btn,.btn:active,.btn:focus{
-	padding:1rem;
+	margin:0.5rem;
+	padding:0.5rem;
 	background:var(--secondary-transparent);
 	color:var(--text-color);
 	border:none;
-	border-radius:0.5rem;
+	border-radius:0.2rem;
 	text-transform:uppercase;
 	outline:none;
 	
@@ -196,17 +198,44 @@ a.btn-sm:active {
 	background:var(--secondary-color);
 }
 
-.btn-primary {
+.btn-primary,.btn.primary:active,.btn-primary:focus {
 	background:var(--primary-color);
+	color:white;
+}
 
+.btn-success,.btn.success:active,.btn-success:focus {
+	background:var(--success-color);
 	color:white;
 }
 
 
+.btn-danger,.btn.danger:active,.btn-danger:focus {
+	background:var(--danger-color);
+	color:white;
+}
 
 .p10 {
 	padding-left:1rem;
 	padding-right:1rem;
 }
 
+.flex-left {
+	padding-top:1rem;
+	display:flex;
+	justify-content:flex-start;
 
+}
+
+.flex-right {
+	padding-top:1rem;
+	display:flex;
+	justify-content:flex-end;
+
+}
+
+.flex-justify {
+	padding-top:1rem;
+	display:flex;
+	justify-content:space-between;
+
+}
