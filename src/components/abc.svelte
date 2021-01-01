@@ -1,10 +1,21 @@
 <script lang="ts">
+
+import * as file from "./../scripts/file";
 let data=[];
 	for(let i=0;i<50;i++) {
 		data[i]=""+i;
     }
     
-let files;
+let files:File[];
+let filedata:string="";
+
+let upload=()=>{
+    file.read(files[0],res=>{
+        filedata=res;
+        console.log(res);
+
+    });
+};
 </script>
 
 <div class="container">
@@ -16,11 +27,10 @@ let files;
     <div>
         <input class="file-input" type="file" bind:files>
 
-{#if files && files[0]}
-	<p>
-		{files[0].name}
-	</p>
-{/if}
+    {#if files && files[0]}
+    <p><button class="btn btn-success" on:click={upload}>upload</button></p>
+    <p>File length : {filedata.length}</p>
+    {/if}
     </div>
 
 </div>
