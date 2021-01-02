@@ -13,6 +13,8 @@ let rowlength:number=60;
 let rows:string[][]=[];
 rows[0]=[];
 let getRows = () => {
+    rows=[];
+    rows[0]=[];
     let row:number=0;
     let index:number=0;
     for(let item of filedata) {
@@ -45,8 +47,10 @@ let upload=()=>{
 <div class="card">
     <h2>File Upload</h2>
     <div>
-        <input class="file-input" type="file" bind:files>
-
+        <label class="custom-file-upload">
+            <input type="file" bind:files/>
+             Custom Upload
+        </label>
     {#if files && files[0]}
     <p><button class="btn btn-success" on:click={upload}>upload</button></p>
     <p>File length : {filedata.length}</p>
@@ -67,7 +71,7 @@ let upload=()=>{
         {#each rows as row,rowIndex}
         <tr>
             {#each row as col,colIndex}
-                <td>{col}</td>
+                <td>{col.charCodeAt(0)}</td>
             {/each}
         </tr>
         {/each}
