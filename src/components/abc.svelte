@@ -49,7 +49,7 @@ let upload=()=>{
     <div>
         <label class="custom-file-upload">
             <input type="file" bind:files/>
-             Custom Upload
+             Choose File
         </label>
     {#if files && files[0]}
     <p><button class="btn btn-success" on:click={upload}>upload</button></p>
@@ -66,12 +66,12 @@ let upload=()=>{
 
 <div class="container">
 
-<table>
+<table class="table-fixed">
     <tbody>
         {#each rows as row,rowIndex}
         <tr>
             {#each row as col,colIndex}
-                <td>{col.charCodeAt(0)}</td>
+                <td style="width:3rem;">{col.charCodeAt(0)}</td>
             {/each}
         </tr>
         {/each}

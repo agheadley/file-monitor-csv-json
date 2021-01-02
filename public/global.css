@@ -256,15 +256,17 @@ a.btn-sm:active {
 
 table {
 	border-collapse: collapse;
-	width:100%;
-	table-layout: fixed;
 }
 
 td, th {
 	border: 1px solid var(--text-color);
 	padding: 0.5rem;
 	text-align: left;
-	width:3rem;
+}
+
+.table-fixed {
+	table-layout: fixed;
+	width:100%;
 }
 
 input[type="file"] {
